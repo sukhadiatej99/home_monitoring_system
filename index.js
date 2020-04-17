@@ -3,8 +3,8 @@ let app = express();
 let http = require('http').createServer(app);
 // let Sensor = require('./models/sensor.js');
 let io = require('socket.io')(http);
-const accountSid = 'ACCOUNT_SID';
-const authToken = 'AUTH_TOKEN';
+const accountSid = 'AC04bd5100137a6cb05e681fa323327bd1';
+const authToken = '7c2624f730c2ad3528a3bc1c26b67adf';
 const client = require('twilio')(accountSid, authToken);
 
 
@@ -93,8 +93,8 @@ arduino.on('ready', function(){
 			client.messages
  			 .create({
      			body: 'Dangerous gas level',
-     			from: 'FROM_NUMBER',
-     			to: 'NUMBER_YOU_WANT_TO_SEND_MESSAGE'
+     			from: '+18596956358',
+     			to: '+14379812722'
    })
   .then(message => console.log(message.sid));
 		}
@@ -128,8 +128,8 @@ arduino.on('ready', function(){
 			client.messages
 			.create({
 				body: 'Dangerous temperature level',
-				from: 'FROM_NUMBER',
-				to: 'NUMBER_YOU_WANT_TO_SEND_MESSAGE'
+				from: '+18596956358',
+				to: '+14379812722'
 			  })
 		}
 			else
