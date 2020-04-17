@@ -3,19 +3,94 @@
 <head>
 <meta charset="UTF-8">
 <title>Cust OS</title>
-
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link href="css/reset.css" rel="stylesheet" type="text/css" media="screen">
 <link href="css/main.css" rel="stylesheet" type="text/css" media="screen">
+
+
+
+<meta name="author" content="binkdot5">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src='https://api.mapbox.com/mapbox-gl-js/v1.8.0/mapbox-gl.js'></script>
+<link href='https://api.mapbox.com/mapbox-gl-js/v1.8.0/mapbox-gl.css' rel='stylesheet' />
+
+<link href="https://fonts.googleapis.com/css?family=Montserrat:600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Lato:400,400i&display=swap" rel="stylesheet">
 <script src="https://unpkg.com/vue@2.3.4"></script>
 </head>
 
 <body>
-    <div id="container">
-        <h3>Tempreture:</h3>
-        <p id="thermometer"></p>
+    <div class="container">
+        <nav>
+
+            <ul class="sidenav">
+                <li>
+                    <img src="images/Artboard 1.png" id="logo">
+                </li>
+                <li><a class="active" href="#top"><img src="images/home.png" alt="home" id="menu"></a></li>
+                <li><a href="#warning"><img src="images/notify.png" alt="Notification" id="menu"></a></li>
+                <li><a href="#news"><img src="images/news.png" alt="news" id="menu"></a></li>
+                <li><a href="#contact"><img src="images/contact.png" alt="contact" id="contactus"></a></li>
+            </ul>
+        </nav>
+        <div id="head">
+            <img src="images/user.jpg " alt="Logo" id="user">
+            <p id="name">User</p>
+            <h1 id="brand">CUSTOS</h1>
+
+
+        </div>
+
+        <h1>Hey there, User</h1>
+        <div id ="weather">
+        </div>
+        <div class="sensor">
+            <div id="temperature">
+                <h3 id="tempHeading">Temeprature:</h3>
+                    <p id="temp1"></p>
+                    <p id="temp2"></p>
+                    <p id="temp3"></p>
+
+            </div>
+            <div id="gas">
+                <h3 id="gasHeading">Gas:</h3>
+                <p id="smoke1"></p>
+                <p id="smoke2"></p>
+                <p id="smoke3"></p>
+            </div>
+            <div id="photo">
+                <h3 id="photoHeading">Light:</h3>
+                <p id="light1"></p>
+                <p id="light2"></p>
+            </div>
+        </div>
+        <div>
+            <ul id="warning">
+                <h2>Notification:</h2>
+                <p id="warn">Your house is safe.</p>
+                <!-- <p id="weather"></p> -->
+            </ul>
+        </div>
+        <div id="news">
+            <h2>News:</h2>
+        </div>
+
+        <div id="contact">
+            <div id="picture">
+                <img src="images/samsara.png">
+            </div>
+            <div id="info">
+                <h3 id="bName">Samsara</h3>
+                <p id="address">#6003 Dundas Rd.</br>London, ON</p>
+            </div>
+
+        </div>
     </div>
 
 <script src="/socket.io/socket.io.js"></script>
-<script src="main.js"></script>	
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+<script src="main.js"></script>
+<script src="news.js"></script>
+<script src="weather.js"></script>
 </body>
 </html>

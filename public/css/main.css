@@ -1,0 +1,568 @@
+body
+{
+    background-color: rgb(27, 27, 27);
+    color: white;
+}
+
+ul.sidenav 
+{
+    list-style-type: none;
+    margin-top: -30px;
+    padding: 0;
+    width: 15%;
+    background-color: #2c2c2c;
+    position: fixed;
+    height: 100%;
+    text-align: center;
+}
+  
+ul.sidenav li a 
+{
+    border-bottom: 5px solid rgb(255, 255, 255);
+    font-size: 20px;
+    display: block;
+    color: white;
+    padding: 20px 16px;
+    text-decoration: none;
+}
+  
+ul.sidenav li a:hover
+{
+    background-color: #555;
+    color: black;
+}
+
+#menu
+{
+    height: 40px;
+    width: 40px;
+}
+
+#contactus
+{
+    height: 50px;
+    width: 50px;
+}
+
+#logo
+{
+    margin: auto;
+    margin-top: 20px;
+    height: 120px;
+    width: 120px;
+    margin-bottom: 50px;
+}
+  
+.container h1
+{
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    margin-left: 24.5%;
+}
+
+#user
+{
+    height:60px;
+    width:60px;
+    position: absolute;
+    right: 50px; 
+    border-radius: 50%;
+}
+
+#name
+{
+    position: absolute;
+    right: 50px; 
+    margin-top: 70px;
+    margin-right: 15px;
+}
+
+#weather {
+    margin-top: -70px;
+    font-size: 30px;
+    margin: auto;
+    text-align: center;
+}
+
+#brand
+{
+    color: #dbdbdb; 
+    font-family: 'Helvetica Neue', sans-serif; 
+    font-size: 50px; 
+    font-weight: 100; 
+    line-height: 50px; 
+    letter-spacing: 1px; 
+    padding: 0 0 55px; 
+    border-bottom: double #555;
+    
+
+}
+
+.sensor
+{
+    display: grid;
+  	grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    grid-gap: 10px;
+    margin-left: 20%;
+    margin-top: 20px;
+}
+
+#temperature
+{
+    background-color: #2c2c2c;
+    height: 200px;
+    width: 200px;
+    padding: 10px;
+    box-shadow: 0px 0px 5px 5px rgb(0, 0, 0);
+    position: relative;
+    margin: auto;
+    text-align: center;
+}
+
+#temp1
+{
+    margin-top: 30px;
+    color: #76ef40;
+    font-size: 80px;
+}
+
+#temp2
+{
+    margin-top: 30px;
+    color: orange;
+    font-size: 80px;
+}
+
+#temp3
+{
+    margin-top: 30px;
+    color: red;
+    font-size: 80px;
+}
+
+#gas
+{
+    background-color: #2c2c2c;
+    height: 200px;
+    width: 200px;
+    padding: 10px;
+    box-shadow: 0px 0px 5px 5px rgb(0, 0, 0);
+    position: relative;
+    margin: auto;
+    text-align: center;
+}
+
+#smoke1
+{
+    margin-top: 50px;
+    color: #76ef40;
+    font-size: 45px;
+}
+
+#smoke2
+{
+    margin-top: 50px;
+    color: orange;
+    font-size: 45px;
+}
+
+#smoke3
+{
+    margin-top: 50px;
+    color: red;
+    font-size: 45px;
+}
+
+
+#photo
+{
+    background-color: #2c2c2c;
+    height: 200px;
+    width: 200px;
+    padding: 10px;
+    box-shadow: 0px 0px 5px 5px rgb(0, 0, 0);
+    position: relative;
+    margin: auto;
+    text-align: center;
+    justify-content: center;
+}
+
+#light1
+{
+    margin-top: 50px;
+    color: #76ef40;
+    font-size: 45px;
+}
+
+#light2
+{
+    color: red;
+    font-size: 45px;
+}
+
+#warning
+{
+    
+    margin-left: 24.5%;
+    list-style-type: none;
+    background-color: #2c2c2c;
+    width: 69.5%;
+    padding: 5px;
+    box-shadow: 0px 0px 5px 5px rgb(0, 0, 0);
+    position: relative;
+    margin: auto;
+    margin-left: 25%;
+    margin-top: 20px;
+}
+
+#warn
+{
+    font-size: 30px;
+}
+
+#news
+{  
+    background-color: #2c2c2c;
+    height: 650px;
+    width: 69.5%;
+    padding: 5px;
+    box-shadow: 0px 0px 5px 5px rgb(0, 0, 0);
+    position: relative;
+    margin: auto;
+    margin-left: 25%;
+    margin-top: 20px;
+}
+
+#news ul
+{
+    list-style-type: none;
+}
+
+#news ul li
+{
+    border-bottom: 2px solid black;
+}
+
+#news ul li a
+{
+    font-size: 18px;
+    position: relative;
+    display: inline-block;
+    padding: 15px;
+    color: white;
+    text-decoration: none;
+    box-shadow:inset 0.5em 0 black;
+    transition: box-shadow 1s;
+}
+
+#news ul li a:hover
+{
+    box-shadow:inset 5em 0 black;
+}
+
+#news ul li img
+{
+    margin-top: 20px;
+    height: 50px;
+    width: 50px;
+}
+
+#contact
+{
+    margin-left: 24.5%;
+    list-style-type: none;
+    background-color: #2c2c2c;
+    width: 69.5%;
+    padding: 5px;
+    box-shadow: 0px 0px 5px 5px rgb(0, 0, 0);
+    position: relative;
+    margin: auto;
+    margin-left: 25%;
+    margin-top: 20px;
+    display: grid;
+  	grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    grid-gap: 15px;
+}
+
+#contact img
+{
+    height: 300px;
+    width: 300px;
+}
+
+#info
+{
+    margin: auto;
+}
+
+#bName
+{
+    font-size: 40px;
+}
+
+#address
+{
+    font-size: 20px;
+}
+
+@media screen and (max-width: 500px)
+{
+    ul.sidenav 
+    {
+        list-style-type: none;
+        margin-top: -30px;
+        padding: 0;
+        width: 15%;
+        background-color: #2c2c2c;
+        position: fixed;
+        height: 100%;
+        text-align: center;
+    }
+      
+    ul.sidenav li a 
+    {
+        border-bottom: 5px solid rgb(255, 255, 255);
+        font-size: 20px;
+        display: block;
+        color: white;
+        padding: 20px 16px;
+        text-decoration: none;
+    }
+      
+    ul.sidenav li a:hover
+    {
+        background-color: #555;
+        color: black;
+    }
+    #user
+    {
+        height:35px;
+        width:35px;
+        position: absolute;
+        right: 20px; 
+        border-radius: 50%;
+    }
+    #name
+    {
+        position: absolute;
+        right: 10px; 
+        margin-top: 50px;
+     
+    }
+    #logo
+    {
+        margin: auto;
+        margin-top: 20px;
+        height: 50px;
+        width: 50px;
+        margin-bottom: 50px;
+    }
+    #menu
+    {
+        height: 30px;
+        width: 30px;
+    }
+    
+    #contactus
+    {
+        height: 40px;
+        width: 40px;
+    }
+    #weather {
+
+        font-size: 15px;
+        margin: auto;
+        text-align: center;
+    }
+    #temperature
+    {
+        background-color: #2c2c2c;
+        height: 70px;
+        width: 70px;
+        padding: 10px;
+        box-shadow: 0px 0px 5px 5px rgb(0, 0, 0);
+        position: relative;
+        margin: auto;
+        text-align: center;
+    }
+    #tempHeading
+    {
+        margin-top: 10px;
+        font-size: 10px;
+    }
+    #temp1
+    {
+       margin-top: -10px;
+        color: #76ef40;
+        font-size: 30px;
+    }
+    
+    #temp2
+    {
+        margin-top: -10px;
+        color: orange;
+        font-size: 30px;
+    }
+    
+    #temp3
+    {
+        margin-top: -10px;
+        color: red;
+        font-size: 30px;
+    }
+    #gas
+    {
+        background-color: #2c2c2c;
+        height: 70px;
+        width: 70px;
+        box-shadow: 0px 0px 5px 5px rgb(0, 0, 0);
+        position: relative;
+
+        text-align: center;
+    }
+    #gasHeading
+    {
+        margin-top: 10px;
+        font-size: 10px;
+    }
+    #photo
+    {
+        background-color: #2c2c2c;
+        height: 70px;
+        width: 70px;
+        box-shadow: 0px 0px 5px 5px rgb(0, 0, 0);
+        position: relative;
+        text-align: center;
+        justify-content: center;
+    }
+    #photoHeading
+    {
+        margin-top: 10px;
+        font-size: 10px;
+    }
+        
+    .sensor
+    {
+        display: grid;
+  	    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+        grid-gap: 10px;
+        margin-left: 20%;
+        margin-top: 20px;
+    }
+    #smoke1
+    {
+        margin-top: 15px;
+        color: #76ef40;
+        font-size: 15px;
+    }
+    
+    #smoke2
+    {
+        margin-top: 15px;
+        color: orange;
+        font-size: 15px;
+    }
+    
+    #smoke3
+    {
+        margin-top: 15px;
+        color: red;
+        font-size: 15px;
+    }
+    #light1
+    {
+        margin-top: 10px;
+        color: #76ef40;
+        font-size: 15px;
+    }
+    
+    #light2
+    {
+        margin-top: 10px;
+        color: red;
+        font-size: 15px;
+    }
+    #news
+    {  
+        background-color: #2c2c2c;
+        height: 700px;
+        width: 69.5%;
+        padding: 5px;
+        box-shadow: 0px 0px 5px 5px rgb(0, 0, 0);
+        position: relative;
+        margin: auto;
+        margin-left: 25%;
+        margin-top: 20px;
+    }
+    
+    #news ul
+    {
+        list-style-type: none;
+    }
+    
+    #news ul li
+    {
+        border-bottom: 2px solid black;
+    }
+    
+    #news ul li a
+    {
+        font-size: 10px;
+        position: relative;
+        display: inline-block;
+        padding: 15px;
+        color: white;
+        text-decoration: none;
+        box-shadow:inset 0.5em 0 black;
+        transition: box-shadow 1s;
+    }
+    
+    #news ul li a:hover
+    {
+        box-shadow:inset 5em 0 black;
+    }
+    
+    #news ul li img
+    {
+        margin-top: 20px;
+        height: 20px;
+        width: 20px;
+    }
+    #contact
+    {
+        margin-left: 24.5%;
+        list-style-type: none;
+        background-color: #2c2c2c;
+        width: 69.5%;
+        padding: 5px;
+        box-shadow: 0px 0px 5px 5px rgb(0, 0, 0);
+        position: relative;
+        margin: auto;
+        margin-left: 25%;
+        margin-top: 20px;
+        display: grid;
+          grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+        grid-gap: 15px;
+    }
+    
+    #contact img
+    {
+        margin: auto;
+        height: 200px;
+        width: 200px;
+    }
+    
+    #info
+    {
+        margin: auto;
+    }
+    
+    #bName
+    {
+        font-size: 20px;
+    }
+    
+    #address
+    {
+        font-size: 10px;
+    }
+}
