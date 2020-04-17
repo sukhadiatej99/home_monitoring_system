@@ -113,10 +113,7 @@ arduino.on('ready', function(){
 		freq: 5000
 		
 	});
-	photoresistor = new five.Sensor({
-		pin: "A2",
-		freq: 5000
-	  });
+
 
 
 	temp.on('data', function(){
@@ -151,10 +148,7 @@ arduino.on('ready', function(){
 	gas.on('data', function(){
         io.sockets.emit('gasReading', this.value);
 	})
-	photoresistor.on("data", function() {
-		console.log(this.value);
-		io.sockets.emit('photoReading', this.value);
-	});
+
 
 	//this will refresh all sensors after 10 seconds
 	arduino.samplingInterval(10000);
