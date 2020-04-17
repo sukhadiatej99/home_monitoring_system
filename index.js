@@ -60,7 +60,7 @@ http.listen(3000, function(){
 
 let five = require('johnny-five');
 let arduino = new five.Board();
-let temp,photoresistor;
+let temp;
 let light_pin_led;
 const { Board, Led } = require("johnny-five");
 const board = new Board()
