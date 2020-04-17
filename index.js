@@ -60,7 +60,7 @@ http.listen(3000, function(){
 
 let five = require('johnny-five');
 let arduino = new five.Board();
-let temp;
+let temp,photoresistor;
 let light_pin_led;
 const { Board, Led } = require("johnny-five");
 const board = new Board()
@@ -113,7 +113,10 @@ arduino.on('ready', function(){
 		freq: 5000
 		
 	});
-
+photoresistor = new five.Sensor({
+		pin: "A2",
+		freq: 5000
+	  });
 
 
 	temp.on('data', function(){
@@ -148,7 +151,10 @@ arduino.on('ready', function(){
 	gas.on('data', function(){
         io.sockets.emit('gasReading', this.value);
 	})
-
+photoresistor.on("data", function() {
+		console.log(this.value);
+		io.sockets.emit('photoReading', this.value);
+	});
 
 	//this will refresh all sensors after 10 seconds
 	arduino.samplingInterval(10000);
