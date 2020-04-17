@@ -31,7 +31,7 @@ socket.on('tempReading', function(tempReading){
 		therm1.innerHTML = "";
 	}
 	if(tempReading < 30) {
-		x.style.color = '#76ef40';
+		x.style.color = 'green';
 		document.querySelector("#warn").innerHTML = "Your house is safe.";
 	}
 	else if(tempReading >= 30 && tempReading < 38){
@@ -45,7 +45,7 @@ socket.on('tempReading', function(tempReading){
 });
 
 socket.on('gasReading', function(gasReading){
-	// console.log(gasReading);
+	console.log(gasReading);
 	var sr = Math.round(gasReading);
 	//smoke.innerHTML = Math.round(gasReading);
 
@@ -70,7 +70,7 @@ socket.on('gasReading', function(gasReading){
 	}
 
 	if(gasReading < 27) {
-		x.style.color = '#76ef40';
+		x.style.color = 'green';
 		document.querySelector("#warn").innerHTML = "Your house is safe.";
 	}
 	else if(gasReading >= 27 && gasReading < 32){
@@ -96,3 +96,91 @@ socket.on('photoReading', function(photoReading){
 		photo1.innerHTML = "";
 	}
 });
+
+// socket.on('tempReading', function(tempReading){
+// 	// console.log(tempReading);
+// 	therm.innerHTML = tempReading;
+		
+// 		if(tempReading < 25) {
+// 			x.style.color = 'green';
+// 			document.querySelector("#warn").innerHTML = "Your house is safe.";
+// 		}
+// 		else if(tempReading >= 25 && tempReading < 40){
+// 			x.style.color = 'yellow';
+// 			document.querySelector("#warn").innerHTML = "Your House could be at risk";
+// 		}
+// 		else if(tempReading >= 40){
+// 			x.style.color = 'Red';
+// 			document.querySelector("#warn").innerHTML = "Your house is in danger";
+// 		}
+// });
+
+// socket.on('smokeReading', function(smokeReading){
+// 	// console.log(smokeReading);
+// 	smoke.innerHTML = smokeReading;
+// 	if(smokeReading < 25) {
+// 		x.style.color = 'green';
+// 		document.querySelector("#warn").innerHTML = "Your house is safe.";
+// 	}
+// 	else if(smokeReading >= 25 && smokeReading < 40){
+// 		x.style.color = 'yellow';
+// 		document.querySelector("#warn").innerHTML = "Your House could be at risk";
+// 	}
+// 	else if(smokeReading >= 40){
+// 		x.style.color = 'Red';
+// 		document.querySelector("#warn").innerHTML = "Your house is in danger";
+// 	}
+// });
+
+// socket.on('humidityReading', function(humidityReading){
+// 	// console.log(humidityReading);
+// 	moist.innerHTML = humidityReading;
+// 	if(humidityReading < 25) {
+// 		x.style.color = 'green';
+// 		document.querySelector("#warn").innerHTML = "Your house is safe.";
+// 	}
+// 	else if(humidityReading >= 25 && humidityReading < 40){
+// 		x.style.color = 'yellow';
+// 		document.querySelector("#warn").innerHTML = "Your House could be at risk";
+// 	}
+// 	else if(humidityReading >= 40){
+// 		x.style.color = 'Red';
+// 		document.querySelector("#warn").innerHTML = "Your house is in danger";
+// 	}
+// });
+
+// function warning(tempReading, smokeReading, humidityReading){
+// 	if(tempReading < 25 && smokeReading < 25 && humidityReading < 25) {
+// 		x.style.color = 'green';
+// 		document.querySelector("#warn").innerHTML = "Your house is safe.";
+// 	}
+// 	else if(tempReading >= 25 && tempReading < 40 && smokeReading >= 25 && smokeReading < 40 && humidityReading >= 25 && humidityReading < 40){
+// 		x.style.color = 'yellow';
+// 		document.querySelector("#warn").innerHTML = "Your House could be at risk";
+// 	}
+// 	else if(tempReading >= 40 && smokeReading >= 40 && humidityReading >= 40){
+// 		x.style.color = 'yellow';
+// 		document.querySelector("#warn").innerHTML = "Your House could be at risk";
+// 	}
+// }
+
+// warning();
+
+
+mapboxgl.accessToken = 'pk.eyJ1Ijoic3VrYWhkaWF0ZWo5OSIsImEiOiJjazczcnU4dHUwZzdrM2xwN3k0dXNydWFlIn0.COUcjjkpIgjgwiUopxldsA';
+
+let map = new mapboxgl.Map({
+	container: 'map',
+	style: 'mapbox://styles/mapbox/streets-v11',
+	center: [-96, 37.8],
+	zoom: 1
+});
+
+map.addControl(
+	new mapboxgl.GeolocateControl({
+		positionOptions: {
+			enableHighAccuracy: true
+		},
+		trackUserLocation: true
+	})
+)
